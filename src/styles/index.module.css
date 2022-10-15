@@ -1,7 +1,101 @@
+:root {
+    --main-bg-color: #DBB684;
+    /* --main-bg-color: #C05650; */
+    --main-text-color: #037BA5;
+}
+
+
 html {
-    background-color: #202425;
+    /* background-color: #202425; */
+    background-color: var(--main-bg-color);
     overflow: hidden;
 }
+
+main {
+    width: 100%;
+}
+
+/* .titleCards {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    left:50%;
+    right: 18vw;
+    top: 13vh;
+    transform: translateX(-50%);
+    box-shadow: 8px 8px 6px rgba(85, 85, 78, .5);
+} */
+
+
+.albumTitle {
+    text-align: center;
+    color: var(--main-text-color);
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: default;
+}
+
+.vidPlayer {
+    display: block;
+    margin: auto;
+    margin-top: -1vh;
+    aspect-ratio: 16 / 9;
+    width: 64vw;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .vidPlayer {
+        aspect-ratio: auto;
+        width: 90%;
+        height: 64vh;
+        margin-top: 2vh;
+    }
+} 
+
+.vidControls {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.vidNumber {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-text-color);
+    font-family: "'Rock 3D', cursive";
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-bottom: 0px;
+    cursor: default;
+}
+
+.vidController {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-text-color);
+    font-family: "'Rock 3D', cursive";
+    opacity: .5;
+    margin-bottom: 0px;
+}
+
+.vidController:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+.vidController:active {
+    opacity: .9;
+}
+
 
 .playlistContainer {
     background-color: #202425;
@@ -148,7 +242,7 @@ html {
     margin: auto;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     .playlistContainer {
         width: 95%;
     }
@@ -160,4 +254,4 @@ html {
     .player {
         width: 95%;
     }
-}
+} */
